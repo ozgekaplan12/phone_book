@@ -14,10 +14,10 @@ actor {
   let phone_book = Map.HashMap<Name, Entry>(0, Text.equal, Text.hash);
 
   public func insert(name : Name, entry : Entry): async () {
-    phonebook.put(name, entry);
+    phone_book.put(name, entry);
   };
 
   public query func lookup(name : Name) : async ?Entry {
-    phonebook.get(name)
+    phone_book.get(name)
   };
 };
